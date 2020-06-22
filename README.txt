@@ -1,4 +1,3 @@
-SERBOI FLOREA-DAN 325CB
 Pentru acces complet, ca modificator de acces al claselor am fost folosit public. 
 Campurile au ca modificator de acces default in toate clasele, cu exceptia claselor TempObs si HumObs. Aici temperatura/umidatatea si momentul de timp au ca modificator de acces private pentru a nu permite modificarea din exterior a unei inregistrari. Sunt implementate functii Get pentru a putea face calcule cu valorile.
 Ca structura de date din Java Collection Framework am folosit ArrayList pentru a crea o lista cu inregistrarile temperaturii/umiditatii dintr-un interval, o lista cu valorile tuturor intervalelor din ultimele 24 de ore si o lista cu camerele casei. Functionalitati precum: adaugarea unui element; identificarea unui element cu un indice; lungimea unei liste; sortarea unei liste; etc - sunt deja implementate.
