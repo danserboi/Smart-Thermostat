@@ -1,0 +1,11 @@
+SERBOI FLOREA-DAN 325CB
+Pentru acces complet, ca modificator de acces al claselor am fost folosit public. 
+Campurile au ca modificator de acces default in toate clasele, cu exceptia claselor TempObs si HumObs. Aici temperatura/umidatatea si momentul de timp au ca modificator de acces private pentru a nu permite modificarea din exterior a unei inregistrari. Sunt implementate functii Get pentru a putea face calcule cu valorile.
+Ca structura de date din Java Collection Framework am folosit ArrayList pentru a crea o lista cu inregistrarile temperaturii/umiditatii dintr-un interval, o lista cu valorile tuturor intervalelor din ultimele 24 de ore si o lista cu camerele casei. Functionalitati precum: adaugarea unui element; identificarea unui element cu un indice; lungimea unei liste; sortarea unei liste; etc - sunt deja implementate.
+Tema este compusa din urmatoarele clase:
+- TempObs/HumObs reprezinta temperatura/umiditatea pe care senzorul o observa la un anumit moment. Membri au modificatorul de acces private pentru a nu putea fi modificati din exterior. Se suprascrie metoda compareTo pentru a face sortarea se face in functie de preferinta.
+- TempsInterval/HumsInterval reprezinta totalitea temperaturilor/umiditatilor observate intr-un interval de o ora.
+- Sensor este clasa care reprezinta senzorul impreuna cu valorile temperaturii, respectiv umiditatii, inregistrate in ultimele 24 de ore. Are ca membri un String cu denumirea senzorului si cate un ArrayList pentru lista de temperaturi/umiditati din intervalele ultimelor 24 de ore. Indicele 0 reprezinta cea mai recenta ora, iar 23 - ultima. 
+- Room reprezinta o camera. Are ca membri un String cu denumirea camerei, un intreg - suprafata ei si senzorul cu valorile inregistrate.
+- House este clasa care reprezinta casa cu tot sistemul sau propriu. Are ca membri numarul de camere, temperatura dorita, umiditatea dorita, timpul de referinta si camerele. Aici sunt implementate metodele: observe, observeH, triggerHeat si list. 
+- Tema2 este clasa main. Se citeste input-ul din fisier, se efectueaza operatiile si se scrie in fisierul de output.
